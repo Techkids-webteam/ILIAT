@@ -17,14 +17,21 @@ export default class NavigatorDesktop extends React.Component{
     })
   }
 
+  moveToTarget(e){
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $($(e.target).attr("href")).offset().top - 60
+    }, 500);
+  }
+
   render(){
     return (
       <div className="iliat_navigator_desktop hidden-xs" data-spy="affix" id="scrollspy">
         <ul className="nav col-sm-10 col-sm-offset-1 iliat_navigator_list" role="tablist">
-          <li className="active"><a href="#introduction">Học ở ILIAT có gì hot?</a></li>
-          <li><a href="#members">Giảng viên</a></li>
-          <li><a href="#iliat_how">Học ở ILIAT như thế nào?</a></li>
-          <li className="highlight"><a href="#fee">Học phí và ưu đãi</a></li>
+          <li className="active"><a href="#introduction" onClick={this.moveToTarget}>Học ở ILIAT có gì hot?</a></li>
+          <li><a href="#members" onClick={this.moveToTarget}>Giảng viên</a></li>
+          <li><a href="#iliat_how" onClick={this.moveToTarget}>Học ở ILIAT như thế nào?</a></li>
+          <li className="highlight"><a href="#fee" onClick={this.moveToTarget}>Học phí và ưu đãi</a></li>
           <button>đăng ký ngay</button>
         </ul>
       </div>

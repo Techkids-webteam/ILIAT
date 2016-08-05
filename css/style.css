@@ -82,6 +82,7 @@ html{
   bottom: 30px;
   left: 50%;
   transform: translate(-50%, 0);
+  animation: banner_arrow_animate .5s infinite ease-in-out alternate;
 }
 
 .iliat_dropdown_button{
@@ -158,6 +159,10 @@ html{
 .iliat_navigator_list li a:hover{
   background: transparent;
   text-decoration: underline;
+}
+.iliat_navigator_list li a:focus,
+.iliat_navigator_list li a:active{
+  background: transparent;
 }
 
 .iliat_navigator_list .highlight{
@@ -441,6 +446,14 @@ html{
   }
 }
 
+@keyframes banner_arrow_animate {
+  from{
+    bottom: 35px;
+  }
+  to{
+    bottom: 25px;
+  }
+}
 
 /*
  *  GLOBAL OVERRIDES
