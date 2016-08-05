@@ -1,7 +1,9 @@
+import React from "react";
+
 export default class ILIATIntroduction extends React.Component{
   render(){
     return (
-      <article>
+      <article id="introduction">
         <h2>Học CFA - Tại sao chọn ILIAT?</h2>
         <h4>Chương trình học được thiết kế riêng cho bạn!</h4>
         <div className="row">

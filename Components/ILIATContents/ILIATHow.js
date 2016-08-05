@@ -1,9 +1,10 @@
+import React from "react";
 import ILIATButton from "../ILIATButton/ILIATButton";
 
 export default class ILIATHow extends React.Component{
   render(){
     return (
-      <article>
+      <article id="iliat_how">
         <h2>Học tại ILIAT như thế nào</h2>
         <h4 className="text-left">Lộ trình tinh gọn. Hiệu quả cao. Chi phí thấp. Học là (đam) &quot;mê&quot;!</h4>
         <div className="iliat_timeline">
@@ -25,15 +26,15 @@ export default class ILIATHow extends React.Component{
         <div className="row iliat_steps">
           <div className="col-sm-8">
             <div className="row">
-              <div className="col-sm-4">
+              <div className="col-xs-4">
                 <div className="iliat_step_arrow">1</div>
                 <p className="text-center">Thi thử phỏng vấn đầu vào</p>
               </div>
-              <div className="col-sm-4">
+              <div className="col-xs-4">
                 <div className="iliat_step_arrow">2</div>
                 <p className="text-center">Học và rèn luyện nghiêm túc hiệu quả</p>
               </div>
-              <div className="col-sm-4">
+              <div className="col-xs-4">
                 <div className="iliat_step_arrow">3</div>
                 <p className="text-center">Thử thách với các minitest, luyện thi trên máy tính</p>
               </div>

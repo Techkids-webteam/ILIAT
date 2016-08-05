@@ -87,7 +87,7 @@ html{
 .iliat_dropdown_button{
   width: 100%;
   border: 2px solid #4d4d4d;
-  background: white;
+  background: #ffffff;
   border-radius: 5px;
   padding: 7px 20px;
   text-align: left;
@@ -126,6 +126,11 @@ html{
   color: #4d4d4d;
 }
 
+.iliat_navigator_desktop{
+  top: 60px;
+  left: 54px;
+}
+
 .iliat_navigator_mobile{
   margin: 15px 0;
 }
@@ -133,7 +138,7 @@ html{
 .iliat_navigator_list{
   background: #4d4d4d;
   border-radius: 10px;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
 }
 
@@ -145,8 +150,14 @@ html{
   font-weight: bold;
 }
 
-.iliat_navigator_list a{
+.iliat_navigator_list li a{
   color: inherit;
+  padding: 0;
+}
+
+.iliat_navigator_list li a:hover{
+  background: transparent;
+  text-decoration: underline;
 }
 
 .iliat_navigator_list .highlight{
@@ -188,15 +199,20 @@ html{
 .ilat_content_block{
   padding: 60px 0;
 }
+
 .ilat_content_block h2{
   font-family: 'SVN-Agency FB', sans-serif;
   font-weight: bold;
-  font-size: 7rem;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+  text-align: center;
   text-transform: uppercase;
 }
+
 .ilat_content_block h4{
   text-align: center;
 }
+
 .ilat_content_block h4.text-left{
   text-align: left;
 }
@@ -207,34 +223,36 @@ html{
 
 .iliat_member_thumbnail{
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 25px;
   border: 4px solid #6eb4b8;
+}
+
+.iliat_timeline{
+  margin-bottom: 30px;
+  font-size: 0.5rem;
+}
+
+.iliat_timeline *{
+  vertical-align: bottom;
 }
 
 .highlight_hours{
   font-family: 'SVN-Agency FB', sans-serif;
   font-weight: bold;
-  font-size: 5rem;
+  font-size:  4em;
   text-transform: uppercase;
   color: #6eb4b8;
 }
 
-.iliat_timeline{
-  margin-bottom: 30px;
-}
-.iliat_timeline *{
-  vertical-align: bottom;
-}
-
 .big_equal_sign{
   display: inline-block;
-  margin: 0 25px;
+  margin: 0 1.2em;
 }
 
 .iliat_equal_piece{
-  width: 60px;
-  height: 12px;
-  margin: 15px 0;
+  height: 1em;
+  margin: 1.1em 0;
+  width: 5em;
   background: #6eb4b8;
 }
 
@@ -242,12 +260,17 @@ html{
   display: inline-block;
 }
 
+.timetable h4{
+  font-size: 2.5em;
+  margin: 0.2em 0;
+}
+
 .vertical_divider{
   display: inline-block;
   width: 2px;
-  height: 90px;
+  height: 6em;
   background: #6eb4b8;
-  margin: 0 55px;
+  margin: 0 4em;
 }
 
 .iliat_timeline .iliat_button{
@@ -255,7 +278,7 @@ html{
   font-size: 2em;
   margin: 0;
   position: relative;
-  top: 8px;
+  line-height: 1.2em;
 }
 
 .iliat_steps{
@@ -266,18 +289,20 @@ html{
   background: #6eb4b8;
   color: #ffffff;
   font-weight: bold;
-  width: 150px;
-  height: 60px;
+  width: 90%;
+  height: 30px;
   position: relative;
   text-align: center;
-  font-size: 3em;
-  padding-left: 30px;
+  font-size: 1.5em;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  left: -7px;
 }
 
 .iliat_step_arrow:before{
   content: "";
-  border: 30px solid transparent;
-  border-left: 30px solid #ffffff;
+  border: 15px solid transparent;
+  border-left: 15px solid #ffffff;
   left: 0px;
   top: 0;
   position: absolute;
@@ -285,11 +310,82 @@ html{
 
 .iliat_step_arrow:after{
   content: "";
-  border: 30px solid transparent;
-  border-left: 30px solid #6eb4b8;
-  right: -60px;
+  border: 15px solid transparent;
+  border-left: 15px solid #6eb4b8;
+  right: -30px;
   top: 0;
   position: absolute;
+}
+
+.price_tag{
+  background: #ffffff;
+  border: 5px dashed #6eb4b8;
+  font-size: 0;
+  height: 9rem;
+  width: 100%;
+  white-space: nowrap;
+  margin: 15px 0 30px;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.price_tag:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.price_tag_content{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.price_tag_content h3,
+.price_tag_content p{
+  margin: 10px;
+}
+
+.price_tag_content p{
+  font-size: 14px;
+}
+
+.price_tag_content h3{
+  color: #000000;
+}
+
+.footer{
+  background: #4d4d4d;
+  padding: 30px 0;
+  color: #ffffff;
+  font-weight: 100;
+  text-align: center;
+}
+
+.footer_col{
+  margin-bottom: 30px;
+}
+
+.footer h3{
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.footer a{
+  color: inherit;
+}
+
+.footer nav a{
+  display: block;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.footer_logo{
+  margin-bottom: 15px;
 }
 
 @media screen and (min-width: 768px){
@@ -315,4 +411,68 @@ html{
     background: transparent;
     color: #6eb4b8;
   }
+
+  .ilat_content_block h2{
+    font-size: 7rem;
+    text-align: left;
+  }
+
+  .iliat_timeline{
+    font-size: 1rem;
+  }
+
+  .iliat_step_arrow{
+    height: 60px;
+    padding-left: 30px;
+    font-size: 3em;
+  }
+
+  .iliat_step_arrow:before{
+    border-width: 30px;
+  }
+
+  .iliat_step_arrow:after{
+    border-width: 30px;
+    right: -60px;
+  }
+
+  .footer{
+    text-align: left;
+  }
+}
+
+
+/*
+ *  GLOBAL OVERRIDES
+ */
+.slick-slide:focus{
+  outline: 0 none;
+}
+
+.slick-dots{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.slick-dots li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.slick-dots li button{
+  border: 0 none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #4d4d4d;
+  display: block;
+  font-size: 0;
+}
+
+#cfa .slick-dots li.slick-active button,
+#cfa .slick-dots li button:active{
+  background: #6eb4b8;
 }

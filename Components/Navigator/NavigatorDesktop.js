@@ -1,26 +1,30 @@
+import React from "react";
 import ILIATButton from "../ILIATButton/ILIATButton";
 
 export default class NavigatorDesktop extends React.Component{
   componentDidMount(){
-    // $('body').scrollspy({ target: '#scrollspy' });
-    // $('#scrollspy').affix({
-    //   offset: {
-    //     top: $(window).height + 60,
-    //     bottom: function () {
-    //       return (this.bottom = 0)//$('.footer').outerHeight(true))
-    //     }
-    //   }
-    // })
+    $('body').scrollspy({
+      target: '#scrollspy',
+      offset: 110
+    });
+
+    $('#scrollspy').affix({
+      offset: {
+        top: function () {
+          return (this.top = $(window).height())
+        }
+      }
+    })
   }
 
   render(){
     return (
-      <div className="iliat_navigator_desktop hidden-xs" id="scrollspy">
-        <ul className="col-sm-10 col-sm-offset-1 iliat_navigator_list" role="tablist">
-          <li><a href="#">Học ở ILIAT có gì hot?</a></li>
-          <li className="active"><a href="#">Giảng viên</a></li>
-          <li><a href="#">Học ở ILIAT như thế nào?</a></li>
-          <li className="highlight"><a href="#">Học phí và ưu đãi</a></li>
+      <div className="iliat_navigator_desktop hidden-xs" data-spy="affix" id="scrollspy">
+        <ul className="nav col-sm-10 col-sm-offset-1 iliat_navigator_list" role="tablist">
+          <li className="active"><a href="#introduction">Học ở ILIAT có gì hot?</a></li>
+          <li><a href="#members">Giảng viên</a></li>
+          <li><a href="#iliat_how">Học ở ILIAT như thế nào?</a></li>
+          <li className="highlight"><a href="#fee">Học phí và ưu đãi</a></li>
           <button>đăng ký ngay</button>
         </ul>
       </div>

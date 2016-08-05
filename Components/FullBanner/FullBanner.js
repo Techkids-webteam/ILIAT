@@ -1,3 +1,4 @@
+import React from "react";
 import BannerArrow from "../FullBanner/BannerArrow";
 import FullBannerContent from "../FullBanner/FullBannerContent";
 

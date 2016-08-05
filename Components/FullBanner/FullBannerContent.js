@@ -1,3 +1,4 @@
+import React from "react";
 import ILIATButton from "../ILIATButton/ILIATButton";
 
 export default class FullBannerContent extends React.Component{
